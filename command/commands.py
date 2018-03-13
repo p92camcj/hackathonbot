@@ -9,6 +9,9 @@ from telebot import util
 def start(message):
     bot.reply_to(message, 'Hello, ' + message.from_user.first_name)
 
+@bot.message_handler(commands=['test'])
+def test(message):
+    bot.reply_to(message, 'Has mandado test')
 
 @bot.message_handler(commands=['change'])
 def change(message):
